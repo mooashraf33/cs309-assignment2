@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">My project</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h1>Contact Us</h1>
+            <p class="label">Please fill out the form below to get in touch with us.</p>
+            <form class="card">
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="username" placeholder="Enter your name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="user_email" placeholder="Enter your email" required>
+                </p>
+                <p>
+                    <label for="id_num">ID Number:</label><br>
+                    <input type="number" id="id_num" name="user_id" placeholder="Enter your ID">
+                </p>
+                <p>
+                    <label for="birthdate">Date:</label><br>
+                    <input type="date" id="birthdate" name="birth_date">
+                </p>
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Interests:</legend>
+                    <input type="checkbox" id="option1" name="interest" value="option1">
+                    <label for="option1">Option 1</label><br>
+                    <input type="checkbox" id="option2" name="interest" value="option2">
+                    <label for="option2">Option 2</label><br>
+                    <input type="checkbox" id="option3" name="interest" value="option3">
+                    <label for="option3">Option 3</label>
+                </fieldset>
+                <p>
+                    <label for="category">Select Option:</label><br>
+                    <select id="category" name="selected_category">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="user_message" placeholder="Type your message here..."></textarea>
+                </p>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">In-Lab Practice (My project)</div>
+    </footer>
+</body>
+
+</html>
