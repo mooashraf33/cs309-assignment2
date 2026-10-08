@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My project - Home</title>
+    <title>Home | Simple Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="site-header">
-        <a class="logo" href="index.html">My project</a>
-        <nav>
+    <header>
+        <nav class="container">
+            <a href="index.html">Simple Site</a>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <section class="hero">
-            <h1>Build clean layouts with Flexbox and Grid</h1>
-            <p>This homepage uses Flexbox for the navigation and CSS Grid for the
-                main content. Resize the window to see it switch to a single column.</p>
-            <div class="actions">
-                <a class="btn" href="components.html">View components</a>
-                <a class="btn btn-outline" href="#about">Learn more</a>
+    <main class="container">
+        <h1>Learn the Basics of HTML and CSS</h1>
+        <p>This small site demonstrates semantic HTML, responsive CSS Grid, and accessible form controls.</p>
+
+        <div class="card-grid">
+            <article class="card">
+                <h2>Semantic HTML</h2>
+                <p>Use meaningful elements to organize each page.</p>
+            </article>
+            <article class="card">
+                <h2>Responsive Grid</h2>
+                <p>Arrange cards in columns that fit the screen.</p>
+            </article>
+            <article class="card">
+                <h2>Simple CSS</h2>
+                <p>Keep shared styles together in one stylesheet.</p>
+            </article>
+            <article class="card">
+                <h2>Accessible Labels</h2>
+                <p>Connect form labels to their controls.</p>
+            </article>
+            <article class="card">
+                <h2>Color Themes</h2>
+                <p>Use system preferences for light and dark colors.</p>
+            </article>
+            <article class="card">
+                <h2>Clear Structure</h2>
+                <p>Give every page a header, main area, and footer.</p>
+            </article>
+        </div>
+
+        <h2>Examples</h2>
+        <p><a class="button" href="#modal">Open modal</a></p>
+        <div class="alert alert-success">
+            <p><strong>Success:</strong> This is an example alert message.</p>
+        </div>
+
+        <div class="modal" id="modal" role="dialog" aria-labelledby="modal-title">
+            <div class="modal-content">
+                <h2 id="modal-title">CSS-only Modal</h2>
+                <p>This modal is shown and hidden using the CSS :target selector.</p>
+                <a class="button" href="#">Close modal</a>
             </div>
-        </section>
-        <main class="grid">
-            <article class="card">
-                <h3>Flexible navigation</h3>
-                <p>The header is a flex container. The logo and links are pushed apart
-                    with justify-content.</p>
-            </article>
-            <article class="card">
-                <h3>Grid content</h3>
-                <p>Cards sit in three equal columns. The gap property handles all the
-                    spacing.</p>
-            </article>
-            <article class="card">
-                <h3>One breakpoint</h3>
-                <p>Below 700px the grid becomes one column, so every card stacks on
-                    phones.</p>
-            </article>
-            <section class="card wide" id="about">
-                <h2>About this page</h2>
-                <p>This wide card spans every column. All colors, the radius and the spacing come from CSS variables
-                    defined once on :root.</p>
-            </section>
-            <section class="card wide" id="contact">
-                <h2>Contact</h2>
-                <p>Questions about the lab? Send us a message.</p>
-                <a class="btn" href="mailto:ta@example.com">Email the TA</a>
-            </section>
-        </main>
-    </div>
-    <footer class="site-footer">
-        <div class="container">In-Lab Practice (My project)</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Simple HTML and CSS learning project.</p>
     </footer>
 </body>
-
 </html>

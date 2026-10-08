@@ -1,0 +1,226 @@
+:root {
+    --page-bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #172033;
+    --border: #667085;
+    --link: #164e9b;
+    --button-bg: #164e9b;
+    --button-text: #ffffff;
+    --success-bg: #e6f4ea;
+    --success-text: #14532d;
+    --error-bg: #fce8e6;
+    --error-text: #7f1d1d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--link);
+}
+
+.container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+/* Cards grid: 1 column on mobile */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+
+.card {
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Alert */
+.alert {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background: var(--success-bg);
+    color: var(--success-text);
+}
+
+.alert-error {
+    background: var(--error-bg);
+    color: var(--error-text);
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 40rem;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choice label {
+    font-weight: normal;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+a:focus,
+button:focus {
+    outline: 3px solid var(--link);
+    outline-offset: 2px;
+}
+
+/* Modal (CSS only, uses :target) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 32rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    padding: 1rem 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-bg: #111827;
+        --surface: #1f2937;
+        --text: #f3f4f6;
+        --border: #9ca3af;
+        --link: #bfdbfe;
+        --button-bg: #bfdbfe;
+        --button-text: #10233d;
+        --success-bg: #123821;
+        --success-text: #dcfce7;
+        --error-bg: #451a1a;
+        --error-text: #fee2e2;
+    }
+}
